@@ -326,6 +326,7 @@ main {
 #menu-nav {
     display: flex;
     gap: 2rem;
+    margin-bottom: 2.5%;
 }
 .menu-nav-item:hover {
     color: var(--clr-accent-400);
@@ -575,12 +576,12 @@ img {
 }
 
 
-@media screen  and (max-width: 611px){
+@media screen  and (max-width: 670px){
   .policies-item li{
     padding: 1px;
   }
-  .policies-item a {
-    font-size: max(1.9vw, 0.6rem);
+  .policies-item a{
+    font-size: clamp(0.5rem, 1.85vw, 1.5rem)
   }
   .policies-item:before {
     content: "";
