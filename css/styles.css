@@ -305,6 +305,12 @@ main {
   }
 }
 
+@media screen and (max-width: 375px) {
+  .logo h4 {
+    font-size: var(--fs-400);
+  }
+}
+
 /* menu header */
 #menu-header-container {
     min-height: 150px;
@@ -432,6 +438,7 @@ img {
   }
   .menu-button-hero {
     max-height: 30px;
+    width: 10%;
   }
   .menu-button-hero img {
     max-height: 25px;
@@ -503,6 +510,7 @@ img {
 
 #footer-logo-container {
   width: 10%;
+  font-size: var(--fs-600);
 }
 .footer-ul-item a:hover {
   color: var(--clr-accent-100);
@@ -532,6 +540,11 @@ img {
   }
 }
 
+@media screen and (max-width: 450px) {
+  #footer-logo-container h4{
+    font-size: var(--fs-400);
+  }
+}
 
 
 
@@ -567,7 +580,7 @@ img {
     padding: 1px;
   }
   .policies-item a {
-    font-size: max(2.2vw, 0.8rem);
+    font-size: max(1.9vw, 0.6rem);
   }
   .policies-item:before {
     content: "";
