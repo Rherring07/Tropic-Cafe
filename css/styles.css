@@ -270,43 +270,41 @@ main {
   font-size: var(--fs-700);
 }
 .logo:hover {
-    color: var(--clr-accent-100);
+  color: var(--clr-accent-100);
 }
 #priumary-header-nav-container{
-    width: 75%;
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  width: 75%;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 #primary-header-nav-ul {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: clamp(1rem, 2vw, 2rem);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(1rem, 2vw, 2rem);
 }
 .link {
   font-size: var(--fs-400)
 }
 .link:hover {
-    color: var(--clr-neutral-100);
+  color: var(--clr-neutral-100);
 }
 
-
-
-@media screen and (max-width: 500px) {
-  .logo h4 {
-   font-size: var(--fs-400);
-  }
+@media screen and (max-width: 800px) {
   .link {
-    font-size: var(--fs-300);
+    display: none;
   }
-  .order-button {
-    font-size: var(--fs-300);
-    padding: 0.5rem;
-    border-radius: 15px;
+  #primary-header-logo-container {
+    width: 50%;
+  }
+  #primary-header-nav-ul {
+    display: block;
   }
 }
+
 /* menu header */
 #menu-header-container {
     min-height: 150px;
@@ -404,6 +402,7 @@ img {
 .menu-item-title-container h2 {
   color: var(--clr-neutral-400);
   width: 95%;
+  font-size: var(--fs-700);
 }
 .menu-button-hero {
   background: transparent;
@@ -422,6 +421,22 @@ img {
 
   max-height: 50px;
 }
+
+@media screen and (max-width: 600px) {
+  .menu-item-title-container {
+    min-height: 70px;
+  }
+  .menu-item-title-container h2 {
+    font-size: var(--fs-700);
+    font-size: var(--fs-400);
+  }
+  .menu-button-hero {
+    max-height: 30px;
+  }
+  .menu-button-hero img {
+    max-height: 25px;
+  }
+}
 /* Footer */
 #primary-footer-background-container {
   min-height: 350px;
@@ -430,6 +445,7 @@ img {
   padding: 0 50px;
   position: absolute;
   bottom: 0;
+  width: 100%;
 }
 #primary-footer-container {
   display: flex;
@@ -444,12 +460,13 @@ img {
   min-height: 75px;
 }
 #footer-social-media-container {
-  width: 20%;
+  width: 40%;
 }
 .social-media-icon {
-  padding: 5px;
-  width: 100%;
+  width: min(5vw, 40px);
+  padding: 10%;
 }
+
 #footer-logo-container {
   flex: 1;
   justify-content: flex-end;
@@ -460,26 +477,66 @@ img {
   border-bottom: 3px solid white;
   color: white;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
 }
 #primary-footer-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10%;
+}
+#primary-footer-nav .footer-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 90%;
+  flex-direction: column;
+}
+#primary-footer-nav .footer-container .footer-title {
+  font-weight: 700;
+  color: black;
 }
 #primary-footer-nav ul {
   display: flex;
   flex-direction: column;
   width: 80%;
 }
+
 #footer-logo-container {
   width: 10%;
 }
 .footer-ul-item a:hover {
   color: var(--clr-accent-100);
 }
+
+@media screen and (max-width: 850px) {
+  #primary-footer-nav{
+    display: block;
+  }
+  #primary-footer-nav-container .footer-container {
+    display: flex;
+    justify-content: center;
+    height: 33.333%;
+    border-bottom: 2px solid white;
+  }
+  #primary-footer-nav-container .footer-order-container {
+    border-bottom: none;
+  }
+  
+  #primary-footer-nav ul {
+    display: none;
+  }
+
+  .footer-title {
+    color: white!important;
+    font-weight: 400!important;
+  }
+}
+
+
+
+
+
+/* policies */
 #policies-container {
   color: white;
   min-height: 75px;
@@ -487,8 +544,8 @@ img {
   align-items: center;
 }
 #policies-ul {
-  width: 60%;
-  min-height: 50px;
+  width: 90%;
+  min-height: 5vh;
   display: flex;
   align-items: center;
 }
@@ -502,4 +559,18 @@ img {
   content:  "・";
   margin-right: 10px;
   color: white;
+}
+
+
+@media screen  and (max-width: 611px){
+  .policies-item li{
+    padding: 1px;
+  }
+  .policies-item a {
+    font-size: max(2.2vw, 0.8rem);
+  }
+  .policies-item:before {
+    content: "";
+    margin: 0;
+  }
 }
